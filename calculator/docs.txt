@@ -1,0 +1,25 @@
+PROFESSIONAL SCIENTIFIC CALCULATOR
+
+TERMINAL-BASED CALCULATOR WITH ADVANCED MATH FUNCTIONS
+
+KEY FEATURES:
+- Basic operations: + - * / ^ % !
+- Mathematical functions: sin, cos, tan, log, exp, sqrt, etc.
+- Matrix operations: det, trace
+- Variables and constants support
+- Calculation history (50 entries)
+- Configurable precision (0-15 decimals)
+- Degrees/radians mode
+
+COMPILATION:
+gcc -o calculator calculator.c -lm -Wall -O2
+
+USAGE EXAMPLES:
+>> 2 + 3 * 4
+>> sin(pi/2) 
+>> x = 5
+>> precision 10
+
+COMMANDS:
+help, functions, constants, variables, history
+deg, rad, precision n, clear, exit/quit
