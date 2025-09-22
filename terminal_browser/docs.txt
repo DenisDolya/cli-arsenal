@@ -1,0 +1,45 @@
+Terminal Browser (ncurses + libcurl)
+
+---
+Build
+---
+Dependencies:
+  - gcc (C11+)
+  - ncurses
+  - libcurl
+
+Build command:
+  gcc -std=c11 terminal_browser.c -o browser -lcurl -lncurses
+
+---
+Usage
+---
+  ./browser <url|file>
+
+Examples:
+  ./browser https://example.com
+  ./browser test.html
+
+Controls:
+  q – quit
+  r – reload
+
+---
+Rendering Features
+---
+- Normal text: gray
+- Headings (<h1>…<h6>): bright white
+- <b>, <strong>: bold white
+- <i>, <em>, <cite>, <dfn>, <address>: italic gray
+- <u>, <ins>, <abbr>: underline
+- <del>: strikethrough
+- <mark>: gray text on yellow background
+- <a href>: blue underlined, clickable
+- <ul>/<ol> + <li>: lists with colored markers
+- <blockquote>, <q>: rendered as indented quotes
+- <hr>: horizontal ASCII line
+- <pre>, <code>, <samp>: monospace blocks
+- <img>, <video>, <audio>: shown as [link]
+- <form>, <input>, <select>, <button>: ASCII form mockup
+
+Block containers like <div>, <section>, <article>, <header>, <footer> are ignored (no extra borders).
