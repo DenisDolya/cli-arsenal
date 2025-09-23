@@ -1,0 +1,48 @@
++------------------------------------------------+                    
+|					WEATHER.CLI                  |
++------------------------------------------------+
+
+What it is
+
+ASCII CLI weather client. Detects location via ip-api and fetches weather from Open-Meteo. Renders a clean ASCII table with max/min temps, bars, and weather descriptions. Supports horizontal scroll (←/→ or a/d) and light ANSI highlights.
+
+Build
+
+Dependencies: libcurl, libm
+
+gcc -O2 -Wall -o weather weather.c -lcurl -lm
+
+Usage
+
+Interactive:
+
+./weather
+
+Enter IP or type me for auto public IP.
+
+CLI options:
+
+-ip <IP>       Specify IP
+-days N        Show N days (1..14), default 7
+--yes-me       Auto 'me'
+--no-ansi      Disable colors
+
+Controls:
+
+← / → or a / d  Scroll table
+q               Quit
+
+Examples:
+
+./weather -ip 8.8.8.8 -days 5
+./weather --yes-me
+
+Features
+
+ASCII-only table, works on embedded/mobile terminals
+
+Auto-fit column widths, horizontal scroll for small screens
+
+Light ANSI accents (optional)
+
+Pure C, no external JSON libs
